@@ -1,0 +1,20 @@
+.chart {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.grid {
+  stroke: #edf1f6;
+  stroke-width: 1;
+}
+
+.axis {
+  stroke: #dde5ee;
+  stroke-width: 1;
+}
+
+.label {
+  fill: #667688;
+  font-size: 11px;
+}

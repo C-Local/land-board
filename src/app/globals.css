@@ -3,10 +3,55 @@
 *::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-  --ink: #14181b;
-  --dark-boundary: #dcdce2;
-  --light-boundary: #ededf4;
+  --text: #05060a;
+  --border: #e8e8e8;
+
+  --ink: #16202b;
+  --ink-light: #5c6b7a;
+  --card-border: #e6edf5;
+
+  --blue: #236ace;
+  --red: #d12222;
+  --green: #3c7852;
+  --yellow-dark: #99650d;
+
+  --card-blue: #e9f2fd;
+  --card-red: #fcecec;
+  --card-yellow: #fdf6e6;
+}
+
+body {
+  font-family: var(--font-instrument-sans);
+  color: var(--text);
+}
+
+.shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "sidebar topbar"
+    "sidebar main";
+}
+
+.main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  background-color: #fbfcfd;
+}
+
+.sr_only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }

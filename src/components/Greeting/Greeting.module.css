@@ -1,0 +1,41 @@
+.greeting {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin-bottom: 28px;
+}
+
+.icon {
+  width: 38px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 21px;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.add_button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 999px;
+  background: white;
+  color: var(--blue);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.add_button:hover {
+  box-shadow: 0 1px 6px rgba(37, 112, 217, 0.22);
+}

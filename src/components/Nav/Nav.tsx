@@ -1,120 +1,99 @@
-import styles from "./Nav.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../assets/land_board_logo.jpg";
 import {
-  LayoutDashboard,
   Building2,
-  Users,
-  FileText,
+  ChartColumn,
   CreditCard,
-  Wrench,
-  Settings,
+  FileText,
+  LayoutDashboard,
   Search,
+  Settings,
+  Users,
+  Wrench,
 } from "lucide-react";
+import logo from "../../assets/land_board_logo.png";
+import CurrentMonth from "../CurrentMonth/CurrentMonth";
+import styles from "./Nav.module.css";
 
-function Nav() {
-  // Logic for creating the current month and year on the topbar
-
-  const dateData = new Date();
-
-  const date =
-    dateData.toLocaleString("default", { month: "long" }) +
-    " " +
-    dateData.getFullYear().toString();
-
+export default function Nav() {
   return (
-    <div className={styles.component_wrapper}>
-      <div className={styles.sidebar}>
-        <div className={styles.branding}>
+    <>
+      <nav className={styles.sidebar} aria-label="Main">
+        <Link className={styles.branding} href="/">
           <Image
             className={styles.logo}
             src={logo}
-            height={609}
             width={609}
-            alt="Land Board logo"
-          ></Image>
-          <h1 className={styles.title}>Land Board</h1>
-        </div>
+            height={609}
+            alt=""
+          />
+          <span className={styles.title}>Land Board</span>
+        </Link>
 
         <Link className={styles.link} href="/">
           <LayoutDashboard
-            size={16}
-            strokeWidth={1.5}
             className={styles.link_icon}
-          ></LayoutDashboard>
-          <p className={styles.link_text}>Dashboard</p>
-        </Link>
-        <Link className={styles.link} href="/">
-          <Building2
-            size={16}
+            size={18}
             strokeWidth={1.5}
-            className={styles.link_icon}
-          ></Building2>
-          <p className={styles.link_text}>Properties</p>
+          />
+          <span className={styles.link_text}>Dashboard</span>
         </Link>
-        <Link className={styles.link} href="/">
-          <Users
-            size={16}
-            strokeWidth={1.5}
-            className={styles.link_icon}
-          ></Users>
-          <p className={styles.link_text}>Tenants</p>
+        <Link className={styles.link} href="/properties">
+          <Building2 className={styles.link_icon} size={18} strokeWidth={1.5} />
+          <span className={styles.link_text}>Properties</span>
         </Link>
-        <Link className={styles.link} href="/">
-          <FileText
-            size={16}
-            strokeWidth={1.5}
-            className={styles.link_icon}
-          ></FileText>
-          <p className={styles.link_text}>Leases</p>
+        <Link className={styles.link} href="/tenants">
+          <Users className={styles.link_icon} size={18} strokeWidth={1.5} />
+          <span className={styles.link_text}>Tenants</span>
         </Link>
-        <Link className={styles.link} href="/">
+        <Link className={styles.link} href="/leases">
+          <FileText className={styles.link_icon} size={18} strokeWidth={1.5} />
+          <span className={styles.link_text}>Leases</span>
+        </Link>
+        <Link className={styles.link} href="/ledger">
           <CreditCard
-            size={16}
-            strokeWidth={1.5}
             className={styles.link_icon}
-          ></CreditCard>
-          <p className={styles.link_text}>Ledger</p>
-        </Link>
-        <Link className={styles.link} href="/">
-          <Wrench
-            size={16}
+            size={18}
             strokeWidth={1.5}
+          />
+          <span className={styles.link_text}>Ledger</span>
+        </Link>
+        <Link className={styles.link} href="/maintenance">
+          <Wrench className={styles.link_icon} size={18} strokeWidth={1.5} />
+          <span className={styles.link_text}>Maintenance</span>
+        </Link>
+        <Link className={styles.link} href="/reports">
+          <ChartColumn
             className={styles.link_icon}
-          ></Wrench>
-          <p className={styles.link_text}>Maintenance</p>
-        </Link>
-        <Link className={styles.link} href="/">
-          <Settings
-            size={16}
+            size={18}
             strokeWidth={1.5}
-            className={styles.link_icon}
-          ></Settings>
-          <p className={styles.link_text}>Settings</p>
+          />
+          <span className={styles.link_text}>Reports</span>
         </Link>
-      </div>
-      <div className={styles.topbar}>
-        <div className={styles.search_container}>
-          <Search
-            size={16}
-            strokeWidth={1.5}
-            className={styles.search_icon}
-          ></Search>
+        <Link className={styles.link} href="/settings">
+          <Settings className={styles.link_icon} size={18} strokeWidth={1.5} />
+          <span className={styles.link_text}>Settings</span>
+        </Link>
+      </nav>
+
+      <header className={styles.topbar}>
+        <div className={styles.search_area} role="search">
+          <Search className={styles.search_icon} size={30} strokeWidth={1.5} />
+          <div className={styles.cursor} />
           <input
             className={styles.search}
             type="text"
             placeholder="Search properties, tenants, etc."
-          ></input>
+            aria-label="Search properties, tenants, and leases"
+          />
         </div>
-        <div className={styles.rightside_items}>
-          <p className={styles.date}>{date}</p>
-          <button className={styles.profile}>CL</button>
+        <div className={styles.topbar_right}>
+          <CurrentMonth className={styles.date} />
+          <button type="button" className={styles.profile} aria-label="Account">
+            CL
+          </button>
         </div>
-      </div>
-      {/* End of component */}
-    </div>
+      </header>
+    </>
   );
 }
-
-export default Nav;
