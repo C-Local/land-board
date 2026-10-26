@@ -9,9 +9,9 @@ import eveningIcon from "../../assets/evening_icon.png";
 import styles from "./Greeting.module.css";
 
 const icons = {
-  morning: morningIcon,
-  afternoon: afternoonIcon,
-  evening: eveningIcon,
+  Morning: morningIcon,
+  Afternoon: afternoonIcon,
+  Evening: eveningIcon,
 };
 
 export function getPeriod(hour) {
