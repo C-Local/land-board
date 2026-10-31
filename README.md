@@ -4,6 +4,12 @@ A rent and property tracking dashboard for small landlords.
 
 ---
 
+## Screenshots
+
+![alt text](doc/land_board_dashboard_screenshot.png)
+
+---
+
 ## Links
 
 [GitHub](https://www.github.com/C-Local) · [LinkedIn](https://www.linkedin.com/in/christian-lanier/)

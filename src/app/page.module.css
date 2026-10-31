@@ -471,6 +471,7 @@
 .row_text {
   flex: 1 1 80px;
   min-width: 0;
+  max-width: 145px;
 }
 
 .row_title,
@@ -493,7 +494,7 @@
 }
 
 .row_meta {
-  margin-left: auto;
+  margin-left: 0;
   flex-shrink: 0;
   font-size: 13px;
   color: var(--ink-light);
