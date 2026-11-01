@@ -1,5 +1,5 @@
 import { Building2 } from "lucide-react";
-import PagePlaceholder from "../../components/PagePlaceholder/PagePlaceholder";
+import PagePlaceholder from "../../_components/PagePlaceholder/PagePlaceholder";
 
 export default function PropertiesPage() {
   return (
