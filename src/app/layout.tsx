@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Instrument_Sans } from "next/font/google";
 import "./globals.css";
-import Nav from "../components/Nav/Nav";
+import Nav from "../_components/Nav/Nav";
 
 const sans = Instrument_Sans({
   subsets: ["latin"],

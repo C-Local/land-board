@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import { Plus } from "lucide-react";
-import useClientValue from "../../hooks/useClientValue";
-import morningIcon from "../../assets/morning_icon.png";
-import afternoonIcon from "../../assets/afternoon_icon.png";
-import eveningIcon from "../../assets/evening_icon.png";
+import useClientValue from "../../_hooks/useClientValue";
+import morningIcon from "../../_assets/morning_icon.png";
+import afternoonIcon from "../../_assets/afternoon_icon.png";
+import eveningIcon from "../../_assets/evening_icon.png";
 import styles from "./Greeting.module.css";
 
 const icons = {

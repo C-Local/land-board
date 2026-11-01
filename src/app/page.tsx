@@ -12,8 +12,8 @@ import {
   Wallet,
   Wrench,
 } from "lucide-react";
-import Chart from "../components/Chart/Chart";
-import Greeting from "../components/Greeting/Greeting";
+import Chart from "../_components/Chart/Chart";
+import Greeting from "../_components/Greeting/Greeting";
 import styles from "./page.module.css";
 
 export default function DashboardPage() {

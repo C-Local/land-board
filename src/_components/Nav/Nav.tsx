@@ -11,7 +11,7 @@ import {
   Users,
   Wrench,
 } from "lucide-react";
-import logo from "../../assets/land_board_logo.png";
+import logo from "../../_assets/land_board_logo.png";
 import CurrentMonth from "../CurrentMonth/CurrentMonth";
 import styles from "./Nav.module.css";
 
